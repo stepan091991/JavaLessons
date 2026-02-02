@@ -1,13 +1,15 @@
 import java.util.Scanner;
 
 void main() {
-    Scanner scanner = new Scanner(System.in);
-    Task1 task1 = new Task1();
-    int[] array = task1.init(scanner);
-    Task2 task2 = new Task2();
-    task2.init(scanner, array);
-    Task3 task3 = new Task3();
-    task3.init(scanner, array);
+        Scanner scanner = new Scanner(System.in);
+        Task1 task1 = new Task1();
+        int[] array = task1.init(scanner);
+        Task2 task2 = new Task2();
+        int maxInt = task2.init(scanner, array);
+        Task3 task3 = new Task3();
+        task3.init(scanner, array);
+        Task4 task4 = new Task4();
+        task4.init(scanner, array, maxInt);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -33,7 +35,8 @@ class Task1 {
 }
 
 class Task2{
-    public void init(Scanner scanner, int[] array){
+    //Найти разность максимального и минимального элементов.
+    public int init(Scanner scanner, int[] array){
         System.out.println("Запущен Task2");
         try {
             //Найти разность максимального и минимального элементов
@@ -49,6 +52,7 @@ class Task2{
                 }
             }
             System.out.println("Разность max - min: " + (max - min));
+            return max;
         }catch (NullPointerException e){
             System.out.println("В Task1 введён некоректный массив!");
         }catch (Exception e){
@@ -56,10 +60,12 @@ class Task2{
         }finally {
             System.out.println("Программа завершенна");
         }
+        return 0;
     }
 }
 
 class Task3{
+    //Подсчитать количество чётных элементов.
     int evenCount = 0;
     public void init(Scanner scanner, int[] array) {
         System.out.println("Запущен Task3");
@@ -76,6 +82,26 @@ class Task3{
             System.out.println("Ошибка: " + e);
         }finally {
             System.out.println("Программа завершенна");
+        }
+    }
+}
+
+class Task4{
+    //Найти индекс максимального элемента.
+    public void init(Scanner scanner, int[] array, int maxInt) {
+        try {
+            for(int i = 0; i < array.length; i++){
+                if(array[i] == maxInt){
+                    System.out.println("Индекс максимального элемента: " + i);
+                    break;
+                }
+            }
+        }catch (NullPointerException e){
+            System.out.println("В Task1 введён некоректный массив!");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+        System.out.println("Программа завершенна");
         }
     }
 }
