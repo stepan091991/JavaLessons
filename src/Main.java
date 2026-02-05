@@ -1,3 +1,4 @@
+import javax.naming.directory.InvalidAttributesException;
 import java.util.Scanner;
 
 void main() {
@@ -12,16 +13,21 @@ void main() {
 //        task4.init(scanner, array, maxInt);
 //        Task5 task5 = new Task5();
 //        task5.init(array);
-        Task6 task6 = new Task6();
-        String string = task6.init(scanner);
-        Task7 task7 = new Task7();
-        task7.init(string);
-        Task8 task8 = new Task8();
-        task8.init(string);
-        Task9 task9 = new Task9();
-        task9.init(string);
-        Task10 task10 = new Task10();
-        task10.init(string);
+//        Task6 task6 = new Task6();
+//        String string = task6.init(scanner);
+//        Task7 task7 = new Task7();
+//        task7.init(string);
+//        Task8 task8 = new Task8();
+//        task8.init(string);
+//        Task9 task9 = new Task9();
+//        task9.init(string);
+//        Task10 task10 = new Task10();
+//        task10.init(string);
+
+        Task11 task11 = new Task11();
+        task11.init(scanner);
+        Task12 task12 = new Task12();
+        task12.init(scanner);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -66,7 +72,7 @@ class Task2{
             System.out.println("Разность max - min: " + (max - min));
             return max;
         }catch (NullPointerException e){
-            System.out.println("В Task1 введён некоректный массив!");
+            System.out.println("Некоректный массив!");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
@@ -89,7 +95,7 @@ class Task3{
             }
             System.out.println("Количество чётных элементов: " + evenCount);
         }catch (NullPointerException e){
-            System.out.println("В Task1 введён некоректный массив!");
+            System.out.println("Некоректный массив!");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
@@ -110,7 +116,7 @@ class Task4{
                 }
             }
         }catch (NullPointerException e){
-            System.out.println("В Task1 введён некоректный массив!");
+            System.out.println("Некоректный массив!");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
@@ -131,7 +137,7 @@ class Task5{
             System.out.println("Произведение = " + result);
             return result;
         }catch (NullPointerException e){
-            System.out.println("В Task1 введён некоректный массив!");
+            System.out.println("Некоректный массив!");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
@@ -146,9 +152,9 @@ class Task6{
     public String init(Scanner scanner){
         System.out.println("Запущен Task6");
         try{
-            System.out.print("Введиде строку для поиска: ");
+            System.out.print("Введите строку для поиска: ");
             String string = scanner.nextLine();
-            System.out.print("Введиде символ для поиска: ");
+            System.out.print("Введите символ для поиска: ");
             String target = scanner.next();
             int occurrencesCount = string.length() - string.replace(target, "").length();
             System.out.println(occurrencesCount);
@@ -225,17 +231,50 @@ class Task10{
     }
 }
 
-//class Task9{
-//    public void init(String string){
-//        try{
-//
-//        }catch (Exception e){
-//            System.out.println("Ошибка: " + e);
-//        }finally {
-//            System.out.println("Программа завершенна");
-//        }
-//    }
-//}
+class Task11{
+    //Проверка диапазона вводимого числа.
+    public void init(Scanner scanner){
+        System.out.println("Запущен Task11");
+        try{
+            System.out.print("Введите минимальное число: ");
+            int min = scanner.nextInt();
+            System.out.print("Введите минимальное число: ");
+            int max = scanner.nextInt();
+            System.out.print("Введите число для проверки: ");
+            int target = scanner.nextInt();
+            if(target > min){
+                if(target < max){
+                    System.out.println("Число входит в диапозон!");
+                }else throw new InvalidAttributesException("Число превышает диапозон!");
+            }else throw new InvalidAttributesException("Число меньше необходимого диапозона!");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
+
+
+class Task12{
+    //Деление двух чисел с обработкой деления на ноль.
+    public void init(Scanner scanner){
+        System.out.println("Запущен Task12");
+        try{
+            System.out.print("Введите делимое число: ");
+            int int1 = scanner.nextInt();
+            System.out.print("Введите делитель: ");
+            int int2 = scanner.nextInt();
+            System.out.println("Результат: " + int1/int2);
+        }catch (ArithmeticException e){
+            System.out.println("Нельзя делить на 0!");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
 
 //class Task9{
 //    public void init(String string){
