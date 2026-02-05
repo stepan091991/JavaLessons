@@ -236,3 +236,15 @@ class Task10{
 //        }
 //    }
 //}
+
+//class Task9{
+//    public void init(String string){
+//        try{
+//
+//        }catch (Exception e){
+//            System.out.println("Ошибка: " + e);
+//        }finally {
+//            System.out.println("Программа завершенна");
+//        }
+//    }
+//}
