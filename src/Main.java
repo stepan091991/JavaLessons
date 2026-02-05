@@ -3,37 +3,40 @@ import java.util.Scanner;
 
 void main() {
         Scanner scanner = new Scanner(System.in);
-//        Task1 task1 = new Task1();
-//        int[] array = task1.init(scanner);
-//        Task2 task2 = new Task2();
-//        int maxInt = task2.init(scanner, array);
-//        Task3 task3 = new Task3();
-//        task3.init(scanner, array);
-//        Task4 task4 = new Task4();
-//        task4.init(scanner, array, maxInt);
-//        Task5 task5 = new Task5();
-//        task5.init(array);
-//        Task6 task6 = new Task6();
-//        String string = task6.init(scanner);
-//        Task7 task7 = new Task7();
-//        task7.init(string);
-//        Task8 task8 = new Task8();
-//        task8.init(string);
-//        Task9 task9 = new Task9();
-//        task9.init(string);
-//        Task10 task10 = new Task10();
-//        task10.init(string);
+        Task1 task1 = new Task1();
+        int[] array = task1.init(scanner);
+        Task2 task2 = new Task2();
+        int maxInt = task2.init(scanner, array);
+        Task3 task3 = new Task3();
+        task3.init(scanner, array);
+        Task4 task4 = new Task4();
+        task4.init(scanner, array, maxInt);
+        Task5 task5 = new Task5();
+        task5.init(array);
+        Task6 task6 = new Task6();
+        String string = task6.init(scanner);
+        Task7 task7 = new Task7();
+        task7.init(string);
+        Task8 task8 = new Task8();
+        task8.init(string);
+        Task9 task9 = new Task9();
+        task9.init(string);
+        Task10 task10 = new Task10();
+        task10.init(string);
 
-//        Task11 task11 = new Task11();
-//        task11.init(scanner);
-//        Task12 task12 = new Task12();
-//        task12.init(scanner);
+        Task11 task11 = new Task11();
+        task11.init(scanner);
+        Task12 task12 = new Task12();
+        task12.init(scanner);
         Task13 task13 = new Task13();
         int[] test = task13.init(scanner);
         Task14 task14 = new Task14();
         task14.init(scanner, test);
+        Task15 task15 = new Task15();
+        task15.init(scanner);
 }
-class Task1 {
+
+static class Task1 {
     //Создать массив из N элементов (N вводится).
     public int[] init(Scanner scanner){
         System.out.println("Запущен Task1");
@@ -56,7 +59,7 @@ class Task1 {
     }
 }
 
-class Task2{
+static class Task2{
     //Найти разность максимального и минимального элементов.
     public int init(Scanner scanner, int[] array){
         System.out.println("Запущен Task2");
@@ -86,7 +89,7 @@ class Task2{
     }
 }
 
-class Task3{
+static class Task3{
     //Подсчитать количество чётных элементов.
     int evenCount = 0;
     public void init(Scanner scanner, int[] array) {
@@ -108,7 +111,7 @@ class Task3{
     }
 }
 
-class Task4{
+static class Task4{
     //Найти индекс максимального элемента.
     public void init(Scanner scanner, int[] array, int maxInt) {
         System.out.println("Запущен Task4");
@@ -129,7 +132,7 @@ class Task4{
     }
 }
 
-class Task5{
+static class Task5{
     //Найти произведение элементов массива.
     public int init(int[] array){
         System.out.println("Запущен Task5");
@@ -151,7 +154,7 @@ class Task5{
     }
 }
 
-class Task6{
+static class Task6{
     //Найти количество вхождений заданного символа.
     public String init(Scanner scanner){
         System.out.println("Запущен Task6");
@@ -172,7 +175,7 @@ class Task6{
     }
 }
 
-class Task7{
+static class Task7{
     //Преобразовать строку в массив символов и вывести его.
     public void init(String string){
         System.out.println("Запущен Task7");
@@ -189,7 +192,7 @@ class Task7{
     }
 }
 
-class Task8{
+static class Task8{
     // Заменить все пробелы на символ '_'.
     public void init(String string){
         System.out.println("Запущен Task8");
@@ -203,7 +206,7 @@ class Task8{
     }
 }
 
-class Task9{
+static class Task9{
     //Подсчитать количество слов.
     public void init(String string){
         System.out.println("Запущен Task9");
@@ -217,7 +220,7 @@ class Task9{
     }
 }
 
-class Task10{
+static class Task10{
     //Определить, начинается ли строка с заглавной буквы.
     public void init(String string){
         System.out.println("Запущен Task10");
@@ -235,7 +238,7 @@ class Task10{
     }
 }
 
-class Task11{
+static class Task11{
     //Проверка диапазона вводимого числа.
     public void init(Scanner scanner){
         System.out.println("Запущен Task11");
@@ -260,7 +263,7 @@ class Task11{
 }
 
 
-class Task12{
+static class Task12{
     //Деление двух чисел с обработкой деления на ноль.
     public void init(Scanner scanner){
         System.out.println("Запущен Task12");
@@ -280,7 +283,7 @@ class Task12{
     }
 }
 
-class Task13{
+static class Task13{
     //Проверка ввода размера массива.
     public int[] init(Scanner scanner){
         System.out.println("Запущен Task13");
@@ -306,7 +309,7 @@ class Task13{
     }
 }
 
-class Task14{
+static class Task14{
     //Чтение элемента массива по индексу пользователя.
     public void init(Scanner scanner, int[] array){
         System.out.println("Запущен Task14");
@@ -324,14 +327,22 @@ class Task14{
     }
 }
 
-//class Task9{
-//    public void init(String string){
-//        try{
-//
-//        }catch (Exception e){
-//            System.out.println("Ошибка: " + e);
-//        }finally {
-//            System.out.println("Программа завершенна");
-//        }
-//    }
-//}
+static class Task15{
+    //Исключение при делении отрицательных чисел.
+    public void init(Scanner scanner){
+        System.out.println("Запущен Task15");
+        try {
+            System.out.print("Введите отрицательное делимое число: ");
+            int int1 = scanner.nextInt();
+            System.out.print("Введите делитель: ");
+            int int2 = scanner.nextInt();
+            System.out.println("Результат: " + int1 / int2);
+        }catch (ArithmeticException e){
+            System.out.println("Ошибка деленя отрицательных чисел");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
