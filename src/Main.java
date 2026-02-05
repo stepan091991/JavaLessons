@@ -3,16 +3,16 @@ import java.util.Scanner;
 
 void main() {
         Scanner scanner = new Scanner(System.in);
-        Task1 task1 = new Task1();
-        int[] array = task1.init(scanner);
-        Task2 task2 = new Task2();
-        int maxInt = task2.init(scanner, array);
-        Task3 task3 = new Task3();
-        task3.init(scanner, array);
-        Task4 task4 = new Task4();
-        task4.init(scanner, array, maxInt);
-        Task5 task5 = new Task5();
-        task5.init(array);
+//        Task1 task1 = new Task1();
+//        int[] array = task1.init(scanner);
+//        Task2 task2 = new Task2();
+//        int maxInt = task2.init(scanner, array);
+//        Task3 task3 = new Task3();
+//        task3.init(scanner, array);
+//        Task4 task4 = new Task4();
+//        task4.init(scanner, array, maxInt);
+//        Task5 task5 = new Task5();
+//        task5.init(array);
         Task6 task6 = new Task6();
         String string = task6.init(scanner);
         Task7 task7 = new Task7();
@@ -336,9 +336,12 @@ static class Task15{
             int int1 = scanner.nextInt();
             System.out.print("Введите делитель: ");
             int int2 = scanner.nextInt();
+            if(int1 < 0 || int2 < 0){
+                throw new InvalidAttributesException("Число меньше необходимого диапозона!");
+            }
             System.out.println("Результат: " + int1 / int2);
         }catch (ArithmeticException e){
-            System.out.println("Ошибка деленя отрицательных чисел");
+            System.out.println("Ошибка деления отрицательных чисел");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
