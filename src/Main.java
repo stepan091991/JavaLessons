@@ -2,14 +2,18 @@ import java.util.Scanner;
 
 void main() {
         Scanner scanner = new Scanner(System.in);
-        Task1 task1 = new Task1();
-        int[] array = task1.init(scanner);
-        Task2 task2 = new Task2();
-        int maxInt = task2.init(scanner, array);
-        Task3 task3 = new Task3();
-        task3.init(scanner, array);
-        Task4 task4 = new Task4();
-        task4.init(scanner, array, maxInt);
+//        Task1 task1 = new Task1();
+//        int[] array = task1.init(scanner);
+//        Task2 task2 = new Task2();
+//        int maxInt = task2.init(scanner, array);
+//        Task3 task3 = new Task3();
+//        task3.init(scanner, array);
+//        Task4 task4 = new Task4();
+//        task4.init(scanner, array, maxInt);
+//        Task5 task5 = new Task5();
+//        task5.init(array);
+        Task6 task6 = new Task6();
+        task6.init(scanner);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -89,6 +93,7 @@ class Task3{
 class Task4{
     //Найти индекс максимального элемента.
     public void init(Scanner scanner, int[] array, int maxInt) {
+        System.out.println("Запущен Task4");
         try {
             for(int i = 0; i < array.length; i++){
                 if(array[i] == maxInt){
@@ -105,5 +110,45 @@ class Task4{
         }
     }
 }
-//wew
+
+class Task5{
+    //Найти произведение элементов массива.
+    public int init(int[] array){
+        System.out.println("Запущен Task5");
+        try{
+            int result = 1;
+            for(int i = 0; i < array.length; i++){
+                result = result * array[i];
+            }
+            System.out.println("Произведение = " + result);
+            return result;
+        }catch (NullPointerException e){
+            System.out.println("В Task1 введён некоректный массив!");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+        return 0;
+    }
+}
+
+class Task6{
+    //Найти количество вхождений заданного символа.
+    public void init(Scanner scanner){
+        System.out.println("Запущен Task6");
+        try{
+            System.out.print("Введиде строку для поиска: ");
+            String string = scanner.next();
+            System.out.print("Введиде символ для поиска: ");
+            String target = scanner.next();
+            int occurrencesCount = string.length() - string.replace(target, "").length();
+            System.out.println(occurrencesCount);
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
 
