@@ -18,6 +18,10 @@ void main() {
         task7.init(string);
         Task8 task8 = new Task8();
         task8.init(string);
+        Task9 task9 = new Task9();
+        task9.init(string);
+        Task10 task10 = new Task10();
+        task10.init(string);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -161,7 +165,7 @@ class Task6{
 class Task7{
     //Преобразовать строку в массив символов и вывести его.
     public void init(String string){
-        System.out.println("Запущен Task6");
+        System.out.println("Запущен Task7");
         try{
             char[] charArray = string.toCharArray();
             for(int i = 0; i < charArray.length; i++){
@@ -176,8 +180,9 @@ class Task7{
 }
 
 class Task8{
+    // Заменить все пробелы на символ '_'.
     public void init(String string){
-        // Заменить все пробелы на символ '_'.
+        System.out.println("Запущен Task8");
         try{
             System.out.println(string.replaceAll(" ", "_"));
         }catch (Exception e){
@@ -188,3 +193,46 @@ class Task8{
     }
 }
 
+class Task9{
+    //Подсчитать количество слов.
+    public void init(String string){
+        System.out.println("Запущен Task9");
+        try{
+            System.out.println("Всего слов: " + string.split(" ").length);
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
+
+class Task10{
+    //Определить, начинается ли строка с заглавной буквы.
+    public void init(String string){
+        System.out.println("Запущен Task10");
+        try{
+            if(Character.isUpperCase(string.toCharArray()[0])){
+                System.out.println(string.toCharArray()[0] + " заглавная!");
+            }else{
+                System.out.println(string.toCharArray()[0] + " НЕ заглавная!");
+            }
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
+
+//class Task9{
+//    public void init(String string){
+//        try{
+//
+//        }catch (Exception e){
+//            System.out.println("Ошибка: " + e);
+//        }finally {
+//            System.out.println("Программа завершенна");
+//        }
+//    }
+//}
