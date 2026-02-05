@@ -13,7 +13,11 @@ void main() {
 //        Task5 task5 = new Task5();
 //        task5.init(array);
         Task6 task6 = new Task6();
-        task6.init(scanner);
+        String string = task6.init(scanner);
+        Task7 task7 = new Task7();
+        task7.init(string);
+        Task8 task8 = new Task8();
+        task8.init(string);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -135,15 +139,47 @@ class Task5{
 
 class Task6{
     //Найти количество вхождений заданного символа.
-    public void init(Scanner scanner){
+    public String init(Scanner scanner){
         System.out.println("Запущен Task6");
         try{
             System.out.print("Введиде строку для поиска: ");
-            String string = scanner.next();
+            String string = scanner.nextLine();
             System.out.print("Введиде символ для поиска: ");
             String target = scanner.next();
             int occurrencesCount = string.length() - string.replace(target, "").length();
             System.out.println(occurrencesCount);
+            return string;
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+        return "";
+    }
+}
+
+class Task7{
+    //Преобразовать строку в массив символов и вывести его.
+    public void init(String string){
+        System.out.println("Запущен Task6");
+        try{
+            char[] charArray = string.toCharArray();
+            for(int i = 0; i < charArray.length; i++){
+                System.out.println(charArray[i]);
+            }
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
+
+class Task8{
+    public void init(String string){
+        // Заменить все пробелы на символ '_'.
+        try{
+            System.out.println(string.replaceAll(" ", "_"));
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
