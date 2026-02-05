@@ -24,10 +24,14 @@ void main() {
 //        Task10 task10 = new Task10();
 //        task10.init(string);
 
-        Task11 task11 = new Task11();
-        task11.init(scanner);
-        Task12 task12 = new Task12();
-        task12.init(scanner);
+//        Task11 task11 = new Task11();
+//        task11.init(scanner);
+//        Task12 task12 = new Task12();
+//        task12.init(scanner);
+        Task13 task13 = new Task13();
+        int[] test = task13.init(scanner);
+        Task14 task14 = new Task14();
+        task14.init(scanner, test);
 }
 class Task1 {
     //Создать массив из N элементов (N вводится).
@@ -268,6 +272,50 @@ class Task12{
             System.out.println("Результат: " + int1/int2);
         }catch (ArithmeticException e){
             System.out.println("Нельзя делить на 0!");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+    }
+}
+
+class Task13{
+    //Проверка ввода размера массива.
+    public int[] init(Scanner scanner){
+        System.out.println("Запущен Task13");
+        try {
+            System.out.print("Введите размер массива: ");
+            int int1 = scanner.nextInt();
+            System.out.print("Введите массив через , (1,2,3,4 и тд): ");
+            String mass = scanner.next();
+            int[] array = new int[int1];
+            for (int i = 0; i < mass.length() / 2 - 1; i++) {
+                array[i] = Integer.parseInt(mass.split(",")[i]);
+            }
+            return array;
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Ошибка переполнения массива");
+        }catch (Exception e){
+            System.out.println("Ошибка: " + e);
+        }finally {
+            System.out.println("Программа завершенна");
+        }
+        int[] test = {0};
+        return test;
+    }
+}
+
+class Task14{
+    //Чтение элемента массива по индексу пользователя.
+    public void init(Scanner scanner, int[] array){
+        System.out.println("Запущен Task14");
+        try {
+            System.out.print("Введите индекс массива: ");
+            int int1 = scanner.nextInt();
+            System.out.println("Число под индексом " + int1 + " = " + array[int1]);
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Ошибка индекса массива");
         }catch (Exception e){
             System.out.println("Ошибка: " + e);
         }finally {
