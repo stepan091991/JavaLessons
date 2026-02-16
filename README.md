@@ -1,1 +1,2 @@
+Я не знаю что тут написать, поэтому тут будет котик)
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&pause=1000&random=true&width=435&lines=%2F%E1%90%A0%CB%B5-+%E2%A9%8A+-%CB%B5%E3%83%9E;%2F%E1%90%A0-+%E1%B4%97+-%E3%83%9E+%E1%B6%BB+%F0%9D%97%93+%F0%90%B0%81;%2F%E1%90%A0+%3E+%CB%95+%3C%E3%83%9E+%E2%82%8A%CB%9A%E2%8A%B9%E2%99%A1;%E0%B8%85%5E%E2%80%A2%EF%BB%8C%E2%80%A2%5E%E0%B8%85)](https://git.io/typing-svg)
