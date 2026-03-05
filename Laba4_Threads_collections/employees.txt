@@ -1,0 +1,2 @@
+test test test;;21;;Proger;;10000.0
+Yaroslav Artamonov;;19;;Student;;1048.0
